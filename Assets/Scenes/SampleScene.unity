@@ -1528,8 +1528,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1864149295}
   - component: {fileID: 1864149294}
+  - component: {fileID: 1864149297}
+  - component: {fileID: 1864149296}
   m_Layer: 0
-  m_Name: Tiles_2
+  m_Name: WhiteEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1602,6 +1604,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864149296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864149293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92c983b2bcd3e44c9e05c0e90474422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPower: 1
+--- !u!70 &1864149297
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864149293}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08890915, y: 0}
+  m_Size: {x: 1.2321815, y: 2.03}
+  m_Direction: 0
 --- !u!1 &1865657462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,8 +2562,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2059754427}
   - component: {fileID: 2059754426}
+  - component: {fileID: 2059754429}
+  - component: {fileID: 2059754428}
   m_Layer: 0
-  m_Name: Tiles_3
+  m_Name: BlackEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2605,6 +2638,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059754428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059754425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92c983b2bcd3e44c9e05c0e90474422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPower: 2
+--- !u!70 &2059754429
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059754425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.09832764, y: -0.046822548}
+  m_Size: {x: 1.0635147, y: 1.9363551}
+  m_Direction: 0
 --- !u!1 &2104947024
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,9 +18,14 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        UIManager.sharedInstance.UpdateCoinsLabel(recollectedCoins);
+    }
+
     public void AddCoins(int coins)
     {
         recollectedCoins += coins;
+        UIManager.sharedInstance.UpdateCoinsLabel(recollectedCoins);
     }
-    
 }
