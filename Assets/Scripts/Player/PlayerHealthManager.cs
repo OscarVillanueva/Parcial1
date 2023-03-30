@@ -23,10 +23,12 @@ public class PlayerHealthManager : MonoBehaviour
     public void AddHealth(int health)
     {
         currentHealth = Math.Min(maxHealth, currentHealth + health);
+        UIManager.sharedInstance.UpdateActiveHealth(currentHealth - 1);
     }
 
     public void ReceiveHit(int hit)
     {
         currentHealth = Math.Max(0, currentHealth - hit);
+        UIManager.sharedInstance.UpdateActiveHealth(currentHealth - 1);
     }
 }
