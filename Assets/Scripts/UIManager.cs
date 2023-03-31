@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Canvas")] 
-    [SerializeField] private Canvas canvas;
-    
     [Header("Coins")]
     [SerializeField] private TMP_Text coinsLabel;
 
@@ -22,9 +19,13 @@ public class UIManager : MonoBehaviour
         {
             sharedInstance = this;
             DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(canvas);
         }
         else Destroy(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        GameManager.OnGameOver += HandleDestroy;
     }
 
     public void UpdateCoinsLabel(int value)
@@ -38,5 +39,15 @@ public class UIManager : MonoBehaviour
         {
             healthImages[i].enabled = !(i > active);
         }
+    }
+
+    private void HandleDestroy()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameOver -= HandleDestroy;
     }
 }

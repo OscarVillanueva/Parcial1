@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,9 +10,16 @@ public class GameManager : MonoBehaviour
     private int recollectedCoins = 0;
     private int currentLevel = 1;
 
-    public delegate void ChangeLevel();
+    private int previousHealth;
+    
+    [HideInInspector]
+    public GameStatus status;
 
+    public delegate void ChangeLevel();
     public static event ChangeLevel OnChangeLevel;
+    
+    public delegate void GameOverActions();
+    public static event GameOverActions OnGameOver;
     
     private void Awake()
     {
@@ -24,12 +33,22 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        status = GameStatus.NotStarted;
+        
         var progress = new SaveGame().LoadData();
         
         recollectedCoins = progress.coins;
         currentLevel = progress.level;
-        PlayerHealthManager.sharedInstance.SetCurrentHealth(progress.health);
+        previousHealth = progress.health;
+    }
+
+    public void StartLevel()
+    {
+        if (status != GameStatus.NotStarted) return;
+
+        status = GameStatus.InGame;
         
+        PlayerHealthManager.sharedInstance.SetCurrentHealth(previousHealth);
         UIManager.sharedInstance.UpdateCoinsLabel(recollectedCoins);
     }
 
@@ -41,8 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
-        Debug.Log("Se acabo el juego");
+        OnGameOver?.Invoke();
     }
 
     public void SaveProgress()
@@ -68,5 +86,10 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         new SaveGame().Reset();
+    }
+
+    public int GetCurrentLevel()
+    {
+        return currentLevel;
     }
 }

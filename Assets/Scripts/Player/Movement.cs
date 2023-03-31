@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnChangeLevel += ResetPosition;
+        GameManager.OnGameOver += HandleDestroy;
     }
 
     void Start()
@@ -59,8 +60,21 @@ public class Movement : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
     }
 
+    private void HandleDestroy()
+    {
+        Invoke(nameof(DelayDestroy), 0.009f);
+    }
+
+    private void DelayDestroy()
+    {
+        Destroy(gameObject);
+    }
+    
     private void OnDestroy()
     {
         GameManager.OnChangeLevel -= ResetPosition;
+        GameManager.OnGameOver -= HandleDestroy;
     }
+    
+    
 }
