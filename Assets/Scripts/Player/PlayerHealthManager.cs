@@ -30,5 +30,17 @@ public class PlayerHealthManager : MonoBehaviour
     {
         currentHealth = Math.Max(0, currentHealth - hit);
         UIManager.sharedInstance.UpdateActiveHealth(currentHealth - 1);
+        
+        if (currentHealth <= 0) GameManager.sharedInstance.GameOver();
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public void SetCurrentHealth(int value)
+    {
+        currentHealth = Math.Min(value, maxHealth);
     }
 }

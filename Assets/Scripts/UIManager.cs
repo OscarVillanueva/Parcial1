@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Canvas")] 
+    [SerializeField] private Canvas canvas;
+    
     [Header("Coins")]
     [SerializeField] private TMP_Text coinsLabel;
 
@@ -15,7 +18,12 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if (!sharedInstance) sharedInstance = this;
+        if (!sharedInstance)
+        {
+            sharedInstance = this;
+            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
+        }
         else Destroy(gameObject);
     }
 

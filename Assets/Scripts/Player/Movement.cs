@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,13 +13,21 @@ public class Movement : MonoBehaviour
     [SerializeField] private float speed = 0;
     [SerializeField] private float jumpForce = 0;
 
-    
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        GameManager.OnChangeLevel += ResetPosition;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
 
     void Update()
     {
@@ -43,5 +52,15 @@ public class Movement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
+    }
+
+    private void ResetPosition()
+    {
+        transform.position = new Vector3(0, 0, 0);
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnChangeLevel -= ResetPosition;
     }
 }
