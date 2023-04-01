@@ -680,9 +680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Retry
-
-'
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e23d6dcfb61c044097b89e79eef7dc5, type: 2}
   m_sharedMaterial: {fileID: -3605441604111481163, guid: 0e23d6dcfb61c044097b89e79eef7dc5, type: 2}
