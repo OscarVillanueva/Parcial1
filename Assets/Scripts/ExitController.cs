@@ -11,6 +11,7 @@ public class ExitController: MonoBehaviour
 
         if (nextLevel == "GameOver")
         {
+            GameManager.sharedInstance.ResetGame();
             GameManager.sharedInstance.GameOver();
         }
         
