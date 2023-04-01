@@ -86,6 +86,12 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Reset Game")]
     public void ResetGame()
     {
+        currentLevel = 0;
+        recollectedCoins = 0;
+        
+        if (PlayerHealthManager.sharedInstance != null)
+            PlayerHealthManager.sharedInstance.SetCurrentHealth(3);
+        
         new SaveGame().Reset();
     }
 
