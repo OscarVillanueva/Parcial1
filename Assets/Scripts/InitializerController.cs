@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class InitializerController: MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    public GameObject player;
 
     private void Start()
     {
-        if (GameManager.sharedInstance.status != GameStatus.NotStarted) return;
+        if (GameManager.sharedInstance.status != GameStatus.NotStarted)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            return;
+        };
         
-        Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
+        player = Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
         GameManager.sharedInstance.StartLevel();
     }
 }

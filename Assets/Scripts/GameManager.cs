@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         OnGameOver?.Invoke();
+        SceneManager.LoadScene("GameOver");
     }
 
     public void SaveProgress()

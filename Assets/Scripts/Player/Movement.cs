@@ -75,6 +75,4 @@ public class Movement : MonoBehaviour
         GameManager.OnChangeLevel -= ResetPosition;
         GameManager.OnGameOver -= HandleDestroy;
     }
-    
-    
 }

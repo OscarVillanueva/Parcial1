@@ -195,3 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPower: 2
+  player: {fileID: 285512248763329386, guid: 07b59ad2c1226224d933b695b7036baa, type: 3}

@@ -220,7 +220,7 @@ Transform:
   - {fileID: 1828255103}
   - {fileID: 354620640}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &145153746 stripped
 Transform:
@@ -754,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8090354340871337191, guid: 4c43a394e144eec4e94d70b940cca1af, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8090354340871337191, guid: 4c43a394e144eec4e94d70b940cca1af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1110,7 +1110,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8437861576010517505, guid: c8906c54c189acd4ca1eb1d3a6638f94, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8437861576010517505, guid: c8906c54c189acd4ca1eb1d3a6638f94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1234,7 +1234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1503099917
 PrefabInstance:
@@ -1245,7 +1245,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8437861576010517505, guid: c8906c54c189acd4ca1eb1d3a6638f94, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8437861576010517505, guid: c8906c54c189acd4ca1eb1d3a6638f94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1627,7 +1627,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8437861576010517505, guid: c8906c54c189acd4ca1eb1d3a6638f94, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8437861576010517505, guid: c8906c54c189acd4ca1eb1d3a6638f94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1777,7 +1777,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.13999999, y: 0.16000003, z: 0}
   m_MaxChunkCount: 16
@@ -3151,7 +3151,7 @@ Transform:
   - {fileID: 729642524}
   - {fileID: 1582682213}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1931968350 stripped
 Transform:
@@ -3277,7 +3277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2412730505444236161, guid: 089f1c5c850849940ae3dcd93fbdacae, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2412730505444236161, guid: 089f1c5c850849940ae3dcd93fbdacae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3399,15 +3399,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7432559480349058162, guid: 2e2f05aea9ab43245812d455141b3a07, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7432559480349058162, guid: 2e2f05aea9ab43245812d455141b3a07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 98.03
+      value: 100.09
       objectReference: {fileID: 0}
     - target: {fileID: 7432559480349058162, guid: 2e2f05aea9ab43245812d455141b3a07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1105928
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 7432559480349058162, guid: 2e2f05aea9ab43245812d455141b3a07, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3456,7 +3456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8411947950560506070, guid: 51a628e0c5e3be742a3cb55ac03c8e24, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8411947950560506070, guid: 51a628e0c5e3be742a3cb55ac03c8e24, type: 3}
       propertyPath: m_LocalPosition.x
